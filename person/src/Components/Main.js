@@ -3,10 +3,10 @@ import React from 'react'
 export default function Main() {
     return (
         <div>
-            <h1>About</h1>
-            <h1>Skills</h1>
-            <h1>Projects</h1>
-            <h1>Contact</h1>
+            <Link to='/About'>About</Link>
+            <Link to='/Skills'>Skills</Link>
+            <Link to='/Projects'>Projects</Link>
+            <Link to='/Contact'>Contact</Link>
         </div>
     )
 }
