@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik } from 'formik';
 import * as Yup from "yup";
+import Error from './Error';
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -27,7 +28,7 @@ export default function Contact() {
             {({ values, errors, touched, handleChange, handleBlur }) => (
                 <form>
                     <div className="input-row">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name: </label>
                         <input
                             type="text"
                             name="name"
@@ -39,10 +40,11 @@ export default function Contact() {
                             className={touched.name && errors.name ? "has-error"
                                 : null}
                         />
+                        <Error touched={touched.name} message={errors.name} />
                     </div>
 
                     <div className="input-row">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="email">Email: </label>
                         <input
                             type="email"
                             name="email"
@@ -52,9 +54,11 @@ export default function Contact() {
                             onBlur={handleBlur}
                             value={values.email}
                             className={touched.email && errors.email ? "has-error"
-                            :null}
+                                : null}
                         />
+                        <Error touched={touched.email} message={errors.email} />
                     </div>
+                    
                     <div className="input-row">
                         <button type="submit">Submit</button>
                     </div>

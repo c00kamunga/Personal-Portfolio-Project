@@ -8,7 +8,7 @@ export default function Projects(props) {
 
     useEffect(() => {
         axios
-            .get('https://github.com/c00kamunga?tab=repositories')
+            .get('https://api.github.com/users/c00kamunga/repos')
             .then(response => {
                 console.log(response)
             })
