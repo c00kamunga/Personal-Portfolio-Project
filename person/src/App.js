@@ -1,5 +1,6 @@
 import React from 'react'; 
 import './App.css';
+import Main from './Components/Main'
 import Home from './Components/Home';
 import About from './Components/About';
 import Skills from './Components/Skills';
@@ -17,6 +18,7 @@ import { Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      <Route path='/Main' component={Main}/>
       <Route path='/Home' component={Home}/>
       <Route path='/About' component={About}/>
       <Route path='/Skills' component={Skills}/>
