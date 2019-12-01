@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,7 +39,7 @@ export default function Home() {
                 I'm Barinder Joseph,<br />
                 An Aspiring Web Developer<br />
             </StyledPara>
-            <StyledButton button>Click To Get Started</StyledButton>
+            <Link to='/Main'><StyledButton button>Click To Get Started</StyledButton></Link>
         </StyledHome>
     )
 }
