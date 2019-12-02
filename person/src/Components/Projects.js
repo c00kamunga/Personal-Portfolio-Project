@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import ProjectCards from './ProjectCards';
 
 
 
@@ -28,9 +29,9 @@ export default function Projects(props) {
         <>
             <h1>Projects List</h1>
             {
-                projects.map((proj) => {
-                    return <h1>{proj.name}</h1>
-                })
+                projects.map((proj) => (
+                    <ProjectCards proj={proj} />
+                ))
 
             }
         </>
